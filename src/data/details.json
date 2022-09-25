@@ -1,0 +1,34 @@
+[{
+    "id": 1,
+    "name":"Jackson",
+    "title": "MERN Stack Developer",
+    "des": "Passionate MERN Stack engineer with hands-on experience in developing scalable websites / applications using a wide range of front-end and back-end skills like HTML, CSS, JavaScript, React js, Node js, Express js, MongoDB etc. Developed 10+ websites from scratch. Looking to further enhance HTML5, CSS3, JS skills as the future full stack developer.",
+    "image": "./images/jacks3.jpg",
+    "pl":[
+        "Java",
+        "JavaScript",
+        "TypeScript",
+        "c++",
+        "c"
+        
+    ],
+    "fe":[
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "ReactJs",
+        "NextJs"
+    ],
+    "be":[
+        "Node Js",
+        "Express Js"
+    ],
+    "api":[
+        "REST API"
+    ],
+    "db":[
+        "MySQL",
+        "MongoDB"
+    ]
+  }
+]
