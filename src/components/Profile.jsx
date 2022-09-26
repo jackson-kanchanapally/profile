@@ -11,9 +11,10 @@ import {
   List,
   ListItem,
   UnorderedList,
-  Center
+  Center,
 } from "@chakra-ui/react";
 import dd from "../data/details.json";
+import Skills from "./Skills";
 export default function Profile() {
   return (
     <>
@@ -23,73 +24,60 @@ export default function Profile() {
 
           return (
             <>
-              <HStack minWidth="max-content" spacing={110} ml={150} pb={80} pt={25}>
+              <HStack
+                minWidth="max-content"
+                spacing={100}
+                ml={150}
+                pb={40}
+                pt={70}
+              >
                 <Circle
                   ml={0}
                   mt={50}
                   mb={50}
-                  w={390}
+                  w={380}
                   bg="#A0AEC0"
                   Shadow="dark-lg"
-                  h={390}
+                  h={380}
                 >
                   <Image
                     borderRadius="100%"
-                    boxSize="350"
+                    boxSize="340"
                     objectFit="cover"
                     src={re.image}
                     alt="Jackson"
                   />
                 </Circle>
-                <Center height='400'>
-  <Divider orientation='vertical' borderColor='white' />
-</Center>
+                <Center height="400">
+                  <Divider orientation="vertical" borderColor="white" />
+                </Center>
                 <Box w={600}>
-                  <Heading fontSize={50} color="#CBD5E0">
-                  Hi , I'm <br/> {re.name}
+                  <Heading fontSize={47} color="#CBD5E0">
+                    Hi , I'm <br />
+                    <Text fontSize={50} color="blue.200">
+                      {re.name}
+                    </Text>
                   </Heading>
-                  <Text mt={4} fontSize={36} color="#CBD5E0">
+                  <Text
+                    mt={4}
+                    fontSize={36}
+                    bgGradient="linear(to-l, #7928CA, #FF0080)"
+                    bgClip="text"
+                  >
                     {re.title}
-                  <Text fontSize={17} color="#CBD5E0">
-                    {re.des}
-                  </Text>
+                    <Text fontSize={17} color="#CBD5E0">
+                      {re.des}
+                    </Text>
                   </Text>
                 </Box>
               </HStack>
-             
-              <Box  pl={150}>
-              <Heading fontSize={43} color="#CBD5E0">Programming Languages</Heading>
-                <UnorderedList>
-                  <ListItem color='#CBD5E0'>{re.pl}</ListItem>
-                  <ListItem color='#CBD5E0'>{re.pl}</ListItem>
-                  <ListItem color='#CBD5E0'>{re.pl}</ListItem>
-                  <ListItem color='#CBD5E0'>{re.pl}</ListItem>
-                </UnorderedList>
-                </Box>
-              <Box  pl={150}>
-              <Heading fontSize={43} color="#CBD5E0">Programming Languages</Heading>
-                <UnorderedList>
-                  <ListItem color='#CBD5E0'>{re.pl}</ListItem>
-                  <ListItem color='#CBD5E0'>{re.pl}</ListItem>
-                  <ListItem color='#CBD5E0'>{re.pl}</ListItem>
-                  <ListItem color='#CBD5E0'>{re.pl}</ListItem>
-                </UnorderedList>
-                </Box>
-              <Box  pl={150}>
-              <Heading fontSize={43} color="#CBD5E0">Programming Languages</Heading>
-                <UnorderedList>
-                  <ListItem color='#CBD5E0'>{re.pl}</ListItem>
-                  <ListItem color='#CBD5E0'>{re.pl}</ListItem>
-                  <ListItem color='#CBD5E0'>{re.pl}</ListItem>
-                  <ListItem color='#CBD5E0'>{re.pl}</ListItem>
-                </UnorderedList>
-                </Box>
+
+              <Skills />
             </>
           );
         })}
-        <Divider pt='10'/>
+        <Divider pt="10" />
       </Stack>
-        
     </>
   );
 }
