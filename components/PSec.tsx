@@ -16,13 +16,14 @@ export const PSec = () => {
   console.log(profileP);
   return (
     <Flex
+    bg="rgb(32,33,36)"
       flexDirection={isNotSmallerScreen ? "row" : "column"}
       justifyItems="center"
       alignItems={"center"}
       justifyContent="space-evenly"
-      mt={isNotSmallerScreen ? "20" : ""}
+      pt={isNotSmallerScreen ? "20" : ""}
     >
-      <Box>
+      <Box mr={isNotSmallerScreen?'-10':''}>
       <Circle
                   ml={0}
                   mt={50}
@@ -48,15 +49,15 @@ export const PSec = () => {
         />
       </Center>
 
-      <Box w={isNotSmallerScreen ? 600 : "90%"}>
-        <Heading fontSize={isNotSmallerScreen ? 47 : 30} color="#CBD5E0">
+      <Box ml={isNotSmallerScreen?'-12':''} w={isNotSmallerScreen ? 520 : "90%"}>
+        <Heading fontSize={isNotSmallerScreen ? 47 : 30}  color="#CBD5E0" fontWeight={450}>
           Hi , I'm <br />
-          <Text fontSize={50} color="blue.200">
+          <Text mb="4" fontSize={50} color="blue.200">
             Jackson
           </Text>
           <Text
-            mb="4"
-            fontSize={isNotSmallerScreen ? 50 : 35}
+            
+            fontSize={isNotSmallerScreen ? 36 : 35}
             color="blue.200"
             justifyContent={isNotSmallerScreen ? "" : "center"}
             bgGradient="linear(to-l, #7928CA, #FF0080)"
@@ -66,7 +67,7 @@ export const PSec = () => {
             MERN Stack Developer
           </Text>
         </Heading>
-        <Text>
+        <Text mt='1' fontSize={15} color="#CBD5E0">
           Passionate MERN Stack engineer with hands-on experience in developing
           scalable websites / applications using a wide range of front-end and
           back-end skills like HTML, CSS, JavaScript, React js, Node js, Express
