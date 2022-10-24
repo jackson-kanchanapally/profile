@@ -12,25 +12,30 @@ import {
   ListItem,
   UnorderedList,
   Center,
+  useMediaQuery
 } from "@chakra-ui/react";
 import dd from "../data/details.json";
 import Skills from "./Skills";
 export default function Profile() {
+  const [isNotSmallerScreen]=useMediaQuery("(min-width:600px)")
   return (
     <>
       <Stack bg="rgb(32,33,36)" w="100%">
         {dd.map((re) => {
           // const {id,image}=re
-
           return (
             <>
-              <HStack
-                minWidth="max-content"
-                spacing={100}
-                ml={150}
+              <Flex
+                // minWidth="max-content"
+                gap={isNotSmallerScreen?'150':'0'}
+                // spacing={100}
+                ml={isNotSmallerScreen?'150':'0'}
                 pb={40}
                 pt={70}
+                direction={isNotSmallerScreen?'row':'column'}
+                alignItems='center'
               >
+                <Box>
                 <Circle
                   ml={0}
                   mt={50}
@@ -48,8 +53,9 @@ export default function Profile() {
                     alt="Jackson"
                   />
                 </Circle>
+                </Box>
                 <Center height="400">
-                  <Divider orientation="vertical" borderColor="white" />
+                  <Divider orientation={isNotSmallerScreen?"vertical":"horizontal"} borderColor="white" />
                 </Center>
                 <Box w={600}>
                   <Heading fontSize={47} color="#CBD5E0">
@@ -70,7 +76,7 @@ export default function Profile() {
                     </Text>
                   </Text>
                 </Box>
-              </HStack>
+              </Flex>
 
               <Skills />
             </>
