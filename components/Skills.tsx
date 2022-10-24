@@ -1,12 +1,13 @@
 import {Box, List,
-    ListItem,
-    UnorderedList,Heading} from '@chakra-ui/react'
-    import dd from "../data/details.json";
-export default function Skills(){
-    return (
-      <>
-        <Box  pl={150}>
-        <Heading fontSize={43} color="#CBD5E0" pb='5'>Programming Languages</Heading>
+    ListItem,useMediaQuery,
+    UnorderedList,Heading} from '@chakra-ui/react';
+    
+export const Skills=()=>{
+  const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
+return(
+  <Box  bg="rgb(32,33,36)" pl={isNotSmallerScreen?150:10} pb='12' pt='20'>
+<Box  pt='14'>
+        <Heading fontSize={isNotSmallerScreen?43:32} color="#CBD5E0" pb='5'>Programming Languages</Heading>
           <UnorderedList>
             <ListItem color='#CBD5E0' ml='5'>
               Java
@@ -18,8 +19,8 @@ export default function Skills(){
           </UnorderedList>
           
           </Box>
-          <Box  pl={150}>
-        <Heading fontSize={43} color="#CBD5E0" pb='5'>Frontend</Heading>
+          <Box pt='10'>
+        <Heading fontSize={isNotSmallerScreen?43:32} color="#CBD5E0" pb='5'>Frontend</Heading>
           <UnorderedList>
             <ListItem color='#CBD5E0' ml='5'>
               HTML
@@ -30,26 +31,26 @@ export default function Skills(){
           </UnorderedList>
           
           </Box>
-          <Box  pl={150}>
-        <Heading fontSize={43} color="#CBD5E0" pb='5'>Backend</Heading>
+          <Box  pt='10'>
+        <Heading fontSize={isNotSmallerScreen?43:32} color="#CBD5E0" pb='5'>Backend</Heading>
           <UnorderedList>
             <ListItem color='#CBD5E0' ml='5'>Node Js</ListItem>
             <ListItem color='#CBD5E0' ml='5'>Express Js</ListItem>
           </UnorderedList>
           </Box>
-          <Box  pl={150}>
-        <Heading fontSize={43} color="#CBD5E0" pb='5'>API</Heading>
+          <Box pt='10'>
+        <Heading fontSize={isNotSmallerScreen?43:32} color="#CBD5E0" pb='5'>API</Heading>
           <UnorderedList>
             <ListItem color='#CBD5E0' ml='5'>REST API</ListItem>
           </UnorderedList>
           </Box>
-          <Box  pl={150}>
-        <Heading fontSize={43} color="#CBD5E0" pb='5'>Database</Heading>
+          <Box  pt='10'>
+        <Heading fontSize={isNotSmallerScreen?43:32} color="#CBD5E0" pb='5'>Database</Heading>
           <UnorderedList>
             <ListItem color='#CBD5E0' ml='5'>MySQL</ListItem>
             <ListItem color='#CBD5E0' ml='5'>MongoDB</ListItem>
           </UnorderedList>
           </Box>
-         </>
-    )
+          </Box>
+)
 }
