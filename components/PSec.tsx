@@ -13,7 +13,7 @@ import profileP from "./images/jacks.jpg";
 
 export const PSec = () => {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
-  console.log(profileP);
+
   return (
     <Flex
     bg="rgb(32,33,36)"
@@ -51,7 +51,7 @@ export const PSec = () => {
 
       <Box ml={isNotSmallerScreen?'-12':''} w={isNotSmallerScreen ? 520 : "90%"}>
         <Heading fontSize={isNotSmallerScreen ? 47 : 30}  color="#CBD5E0" fontWeight={450}>
-          Hi , I'm <br />
+          Hi , I&apos;m <br />
           <Text mb="4" fontSize={50} color="blue.200">
             Jackson
           </Text>
