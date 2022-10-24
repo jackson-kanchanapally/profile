@@ -21,7 +21,7 @@ export const PSec = () => {
       justifyItems="center"
       alignItems={"center"}
       justifyContent="space-evenly"
-      pt={isNotSmallerScreen ? "20" : ""}
+      pt={isNotSmallerScreen ? "41" : ""}
     >
       <Box mr={isNotSmallerScreen?'-10':''}>
       <Circle
