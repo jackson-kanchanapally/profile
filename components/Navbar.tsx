@@ -20,6 +20,7 @@ export const Navbar = () => {
         <a
           href="https://www.linkedin.com/in/jackson-kanchanapally-aa8309238/"
           target="_blank"
+          rel="noreferrer"
         >
           <IconButton
             aria-label="linked in"
@@ -31,7 +32,7 @@ export const Navbar = () => {
             isRound
           />
         </a>
-        <a href="https://github.com/jackson-kanchanapally" target="_blank">
+        <a href="https://github.com/jackson-kanchanapally" target="_blank" rel="noreferrer">
           <IconButton
             aria-label="github"
             size={isNotSmallerScreen?"sm":"md"}
