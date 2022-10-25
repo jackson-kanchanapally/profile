@@ -8,9 +8,12 @@ import { Skills } from '../components/Skills'
 const Home: NextPage = () => {
   return (
     <ChakraProvider>
+     
+   
       <Navbar/>
        <PSec/>
        <Skills/>
+
     </ChakraProvider>
   )
 }

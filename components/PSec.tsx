@@ -21,29 +21,26 @@ export const PSec = () => {
       justifyItems="center"
       alignItems={"center"}
       justifyContent="space-evenly"
-      pt={isNotSmallerScreen ? "8%" : ""}
+      pt={isNotSmallerScreen ? "20" : ""}
     >
       <Box mr={isNotSmallerScreen?'-10':''}>
-      {/* <Circle
+      <Circle
                   ml={0}
                   mt={50}
                   mb={isNotSmallerScreen?50:2}
-                  // w={'380px'}
+                  w={380}
                   bg="#A0AEC0"
-                  // Shadow="dark-lg"
-                  // h={380}
-                > */}
+                  Shadow="dark-lg"
+                  h={380}
+                >
         <Image
-        mt={50}
           src={profileP.src}
           alt="profile pic"
           borderRadius="100%"
-          boxSize="360"
+          boxSize="340"
           objectFit="cover"
-          margin={'4'}
-          border="15px solid #A0AEC0"
         />
-        {/* </Circle> */}
+        </Circle>
       </Box>
       <Center height={isNotSmallerScreen ? "400" : "20"} width={isNotSmallerScreen?'':'90%'}>
         <Divider
