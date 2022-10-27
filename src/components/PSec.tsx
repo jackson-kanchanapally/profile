@@ -9,7 +9,7 @@ import {
   Center,
   Circle,
 } from "@chakra-ui/react";
-import profileP from "./images/jacks.jpg";
+import profileP from './images/jacks.jpg';
 
 export const PSec = () => {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
@@ -21,21 +21,22 @@ export const PSec = () => {
       justifyItems="center"
       alignItems={"center"}
       justifyContent="space-evenly"
-      pt={isNotSmallerScreen ? "8%" : ""}
+      pt={isNotSmallerScreen ? "15vh" : ""}
+      pb={isNotSmallerScreen ? "13vh" : ""}
     >
       <Box mr={isNotSmallerScreen?'-10':''}>
       {/* <Circle
                   ml={0}
                   mt={50}
                   mb={isNotSmallerScreen?50:2}
-                  // w={'380px'}
+                  w={380}
                   bg="#A0AEC0"
-                  // Shadow="dark-lg"
-                  // h={380}
+                  Shadow="dark-lg"
+                  h={380}
                 > */}
         <Image
-        mt={50}
-          src={profileP.src}
+          mt={50}
+          src={profileP}
           alt="profile pic"
           borderRadius="100%"
           boxSize="360"

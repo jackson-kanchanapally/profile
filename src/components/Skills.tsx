@@ -5,7 +5,7 @@ import {Box, List,
 export const Skills=()=>{
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
 return(
-  <Box  bg="rgb(32,33,36)" pl={isNotSmallerScreen?150:10} pb='12' pt='20'>
+  <Box  bg="rgb(32,33,36)" pl={isNotSmallerScreen?150:10} pb='12'>
 <Box  pt='14'>
         <Heading fontSize={isNotSmallerScreen?43:32} color="#CBD5E0" pb='5'>Programming Languages</Heading>
           <UnorderedList>
