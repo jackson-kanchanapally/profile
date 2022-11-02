@@ -10,7 +10,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 export const Navbar = () => {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
   return (
-    <Flex height={isNotSmallerScreen?"10vh":"15vh"} bg="black" alignItems={"center"} justifyContent='space-between'>
+    <Flex height={isNotSmallerScreen?"10vh":"10vh"} bg="black" alignItems={"center"} justifyContent='space-between'>
       <Box>
         <Heading fontSize={"30"} pl={isNotSmallerScreen ? "10" : "5"}>
           Portfolio
