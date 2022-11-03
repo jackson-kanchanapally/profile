@@ -12,7 +12,7 @@ export const Navbar = () => {
   return (
     <Flex height={isNotSmallerScreen?"10vh":"10vh"} bg="black" alignItems={"center"} justifyContent='space-between'>
       <Box>
-        <Heading fontSize={"30"} pl={isNotSmallerScreen ? "10" : "5"}>
+        <Heading color="gray.100" fontSize={"30"} pl={isNotSmallerScreen ? "10" : "5"}>
           Portfolio
         </Heading>
       </Box>
