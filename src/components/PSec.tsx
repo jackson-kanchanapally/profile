@@ -8,15 +8,17 @@ import {
   Text,
   Center,
   Circle,
+  useColorMode
 } from "@chakra-ui/react";
 import profileP from './images/jacks.jpg';
 
 export const PSec = () => {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
-
+  const { colorMode, toggleColorMode } = useColorMode();
+  const isDark = colorMode === "dark";
   return (
     <Flex
-    bg="rgb(32,33,36)"
+    bg={isDark?"rgb(32,33,36)":'gray.200'}
       flexDirection={isNotSmallerScreen ? "row" : "column"}
       justifyItems="center"
       alignItems={"center"}
@@ -54,15 +56,15 @@ export const PSec = () => {
       </Center>
 
       <Box ml={isNotSmallerScreen?'-12':''} w={isNotSmallerScreen ? 520 : "90%"}>
-        <Heading fontSize={isNotSmallerScreen ? 47 : 30}  color="#CBD5E0" fontWeight={450}>
+        <Heading fontSize={isNotSmallerScreen ? 47 : 30}  color={isDark?"#CBD5E0":"gray.700"} fontWeight={450}>
           Hi , I&apos;m <br />
-          <Text mb="4" fontSize={50} color="blue.200">
+          <Text mb="4" fontSize={50} color={isDark?"blue.200":"blue.600"}>
             Jackson
           </Text>
           <Text
             
             fontSize={isNotSmallerScreen ? 36 : 35}
-            color="blue.200"
+            color='blue.200'
             justifyContent={isNotSmallerScreen ? "" : "center"}
             bgGradient="linear(to-l, #7928CA, #FF0080)"
             bgClip="text"
@@ -71,7 +73,7 @@ export const PSec = () => {
             MERN Stack Developer
           </Text>
         </Heading>
-        <Text mt='1' fontSize={15} color="#CBD5E0">
+        <Text mt='1' fontSize={15} color={isDark?"#CBD5E0":'gray.800'}>
           Passionate MERN Stack engineer with hands-on experience in developing
           scalable websites / applications using a wide range of front-end and
           back-end skills like HTML, CSS, JavaScript, React js, Node js, Express
