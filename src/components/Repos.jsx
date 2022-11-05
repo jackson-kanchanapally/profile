@@ -11,6 +11,7 @@ import {
   Stack,
   Skeleton,
   Link,
+  useColorMode
 } from "@chakra-ui/react";
 import axios from "axios";
 export const Repos = () => {
@@ -23,11 +24,13 @@ export const Repos = () => {
         setData(res.data);
       });
   }, []);
+  const { colorMode, toggleColorMode } = useColorMode();
+  const isDark = colorMode === "dark";
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
   return (
     <>
       <Flex
-        bg="rgb(32,33,36) "
+        bg={isDark?"rgb(32,33,36)":'gray.200'}
         flexDirection="row"
         flexWrap={"wrap"}
         justifyContent="center"
@@ -44,7 +47,7 @@ export const Repos = () => {
               p="5"
               borderWidth="1px"
               rounded="md"
-              bg="black"
+              bg={isDark?"black":'gray.100'}
               boxShadow="dark-lg"
               padding={isNotSmallerScreen ? "6" : "5"}
              
@@ -73,7 +76,7 @@ export const Repos = () => {
               <Link href={d.homepage} isExternal>
                 Click here
               </Link>
-              <Box bgGradient='linear(to-r, gray.400, yellow.300, pink.700)' bgClip='text'>
+              <Box bgGradient={isDark?'linear(to-r, gray.400, yellow.300, pink.700)':'linear(to-r, gray.900, yellow.700, pink.900)'} bgClip='text'>
                 {d.language}
               </Box>
               </Flex>
