@@ -14,11 +14,13 @@ import { ColorModeSwitcher } from "./ColorModeSwitcher"
 import { Logo } from "./Logo"
 import { PSec } from "./components/PSec"
 import { Skills } from "./components/Skills"
+import { Repos } from "./components/Repos"
 
 export const App = () => (
   <ChakraProvider theme={theme}>
     <Navbar/>
     <PSec/>
+    <Repos/>
     <Skills/>
  
   </ChakraProvider>
