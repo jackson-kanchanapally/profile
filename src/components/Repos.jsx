@@ -55,7 +55,7 @@ export const Repos = () => {
               borderRadius={isNotSmallerScreen ? "20" : "10"}
               _hover={{ boxShadow:"2xl"}}
             >
-              <Box as="time" dateTime={d.created_at}>
+              <Box as="time" dateTime={d.created_at} fontSize='sm'>
                 {d.created_at.slice(0, 10)}
               </Box>
               <Heading size="md" my="2">
