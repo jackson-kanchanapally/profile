@@ -24,12 +24,12 @@ return(
         <Text fontSize={isNotSmallerScreen?43:32}  color={isDark?"#CBD5E0":"gray.700"} pb='5' fontWeight={400}>Backend</Text>
         <LIm cat={'bn'}/>
           </Box>
-          <Box pt='10'>
+          {/* <Box pt='10'>
         <Text fontSize={isNotSmallerScreen?43:32}  color={isDark?"#CBD5E0":"gray.700"} pb='5' fontWeight={400}>API</Text>
           <UnorderedList>
             <ListItem  color={isDark?"#CBD5E0":"gray.700"} ml='5'>REST API</ListItem>
           </UnorderedList>
-          </Box>
+          </Box> */}
           <Box  pt='10'>
         <Heading fontSize={isNotSmallerScreen?43:32}  color={isDark?"#CBD5E0":"gray.700"} pb='5' fontWeight={400}>Database</Heading>
         <LIm cat={'db'}/>
