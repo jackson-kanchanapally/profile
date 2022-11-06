@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   Flex,
   Box,
@@ -5,7 +6,9 @@ import {
   useMediaQuery,
   IconButton,
   ButtonGroup,
+  useDisclosure,
   useColorMode,
+  Button
 } from "@chakra-ui/react";
 import { FaLinkedin, FaGithub, FaMoon, FaSun } from "react-icons/fa";
 export const Navbar = () => {
@@ -28,13 +31,13 @@ export const Navbar = () => {
           Portfolio
         </Heading>
       </Box>
-      <ButtonGroup pr="10">
+      <ButtonGroup pr="10" >
         <IconButton
           aria-label="theme"
           size={isNotSmallerScreen ? "sm" : "md"}
           ml="1vw"
           bg="rgb(32,33,36)"
-          color="gray.100"
+          color={"gray.100"}
           icon={isDark?<FaMoon />:<FaSun/>}
           onClick={toggleColorMode}
           isRound

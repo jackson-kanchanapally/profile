@@ -8,6 +8,7 @@ import { PSec } from "./components/PSec"
 import { Skills } from "./components/Skills"
 import { Repos } from "./components/Repos"
 
+
 export const App = () => (
   <ChakraProvider>
       <ColorModeScript initialColorMode='dark'>
