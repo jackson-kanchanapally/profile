@@ -15,8 +15,8 @@ export const App = () => (
     </ColorModeScript>
     <Navbar/>
     <PSec/>
-    <Repos/>
     <Skills/>
+    <Repos/>
  
   </ChakraProvider>
 )
