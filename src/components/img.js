@@ -35,6 +35,11 @@ const Img=[
          cat:"fn",
     },
     {
+        id:17,
+        image:"languages/2.png",
+         cat:"fn",
+    },
+    {
         id:8,
         image:"languages/8.png",
          cat:"fn",
