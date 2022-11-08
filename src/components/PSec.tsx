@@ -10,7 +10,7 @@ import {
   Circle,
   useColorMode
 } from "@chakra-ui/react";
-import profileP from './images/jj.jpg';
+import profileP from './images/jacks.jpg';
 
 export const PSec = () => {
   const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
