@@ -11,12 +11,12 @@ import {
   Stack,
   Skeleton,
   Link,
+  Circle,
   useColorMode
 } from "@chakra-ui/react";
 import axios from "axios";
 export const Repos = () => {
   const [data, setData] = useState([]);
-  console.log(data);
   useEffect(() => {
     axios
       .get(`https://api.github.com/users/jackson-kanchanapally/repos`)
@@ -81,6 +81,19 @@ export const Repos = () => {
               </Box>
               </Flex>
             </LinkBox>
+            {/* <Circle w='300px' h='300px' mr='10' mb='10' alignItems={'center'} flexDirection='column' bg={isDark?"gray.700":'gray.100'}
+            _hover={{ boxShadow:"2xl"}}
+              boxShadow="dark-lg">
+                
+           <LinkBox>
+            <LinkOverlay href={d.html_url} target="blank" fontSize='xl'>
+                  {d.name}
+                </LinkOverlay>
+                </LinkBox>
+                <Box bgGradient={isDark?'linear(to-r, gray.400, yellow.300, pink.700)':'linear(to-r, gray.900, yellow.700, pink.900)'} bgClip='text'>
+                {d.language}
+              </Box>
+            </Circle> */}
           </div>
               
         ))}
